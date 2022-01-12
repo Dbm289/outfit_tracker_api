@@ -13,14 +13,14 @@ outfits = Outfit.create([
     description: 'regular outfit, nothing special, wear it out',
     rating_agg: 9,
     shopping_links: 'nike.com',
-    user: users.first.id
+    user_id: users.first.id
 },
 {
     image: 'placeholder 2',
     description: 'this outfit is a little crazier, wow',
     rating_agg: 10,
     shopping_links: 'aimeleondore.com',
-    user: users.last.id
+    user_id: users.last.id
 }
 
 
@@ -29,43 +29,43 @@ outfits = Outfit.create([
 comments = Comment.create([
     {
     text: 'Looks great!',
-    outfit: outfits.first.id
+    outfit_id: outfits.first.id
 },
 {
     text: 'Wow, fancy!',
-    outfit: outfits.last.id
+    outfit_id: outfits.last.id
 }
 ])
 
 likes = Like.create([
     {
     count: 1,
-    outfit: outfits.first.id
+    outfit_id: outfits.first.id
 },
 {
     count: 1,
-    outfit: outfits.last.id
+    outfit_id: outfits.last.id
 }
 ])
 
-links = Links.create([
+links = Link.create([
     {
     links: 'nike.com',
-    outfit: outfits.first.id
+    outfit_id: outfits.first.id
 },
 {
     links: 'aimeleondore.com',
-    outfit: outfits[1].id
+    outfit_id: outfits[1].id
 }
 ])
 
 ratings = Rating.create([
     {
     rating: 9,
-    outfit: outfits.first.id
+    outfit_id: outfits.first.id
 }, 
 {
     rating: 10,
-    outfit: outfits[1].id
+    outfit_id: outfits[1].id
 }
 ])
