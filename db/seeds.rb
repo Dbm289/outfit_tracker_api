@@ -5,6 +5,7 @@
 users = Users.create([
     {
     name: "Dan"
+    email: "danmoore@dan.com"
 }
 ])
 
