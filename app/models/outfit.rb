@@ -6,8 +6,7 @@ class Outfit < ApplicationRecord
     has_many :ratings, :dependent => :destroy
 
     def avg_review
-        avg = ratings.average(:rating).round(2).to_f
-        update_column(:rating_agg, avg)
+        ratings.average(:rating)
 
 end
 

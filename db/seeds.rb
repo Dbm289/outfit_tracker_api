@@ -11,15 +11,15 @@ outfits = Outfit.create([
     {
     image: "image placeholder",
     description: 'regular outfit, nothing special, wear it out',
-    rating_agg: avg_review,
-    links: 'nike.com',
+    rating_agg: 9,
+    shopping_links: 'nike.com',
     user: users.first.id
 },
 {
     image: 'placeholder 2',
     description: 'this outfit is a little crazier, wow',
-    rating_agg: avg_review,
-    links: 'aimeleondore.com',
+    rating_agg: 10,
+    shopping_links: 'aimeleondore.com',
     user: users.last.id
 }
 
@@ -55,7 +55,7 @@ links = Links.create([
 },
 {
     links: 'aimeleondore.com',
-    outfit: outfits[2].id
+    outfit: outfits[1].id
 }
 ])
 
@@ -66,6 +66,6 @@ ratings = Rating.create([
 }, 
 {
     rating: 10,
-    outfit: outfits[2].id
+    outfit: outfits[1].id
 }
 ])
