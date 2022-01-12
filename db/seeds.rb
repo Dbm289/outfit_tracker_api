@@ -2,12 +2,9 @@
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 
 
-users = Users.create([
-    {
-    name: "Dan",
-    email: "danmoore@dan.com"
-    password_digest: "password"
-}
+users = User.create([
+    {name:"Eleanor", email:"Eleanor@eleanor.com", password_digest: 'pw'},
+    {name:"Dan", email:"Dan@dan.com", password_digest:'pw'}
 ])
 
 outfits = Outfit.create([
@@ -15,15 +12,15 @@ outfits = Outfit.create([
     image: "image placeholder",
     description: 'regular outfit, nothing special, wear it out',
     rating_agg: avg_review,
-    links: 'nike.com'
-    user: users.first
+    links: 'nike.com',
+    user: users.first.id
 },
 {
     image: 'placeholder 2',
     description: 'this outfit is a little crazier, wow',
     rating_agg: avg_review,
     links: 'aimeleondore.com',
-    user: users.first
+    user: users.last.id
 }
 
 
@@ -32,43 +29,43 @@ outfits = Outfit.create([
 comments = Comment.create([
     {
     text: 'Looks great!',
-    outfit: outfits.first
+    outfit: outfits.first.id
 },
 {
     text: 'Wow, fancy!',
-    outfit: outfits.second
+    outfit: outfits.last.id
 }
 ])
 
 likes = Like.create([
     {
     count: 1,
-    outfit: outfits.first
+    outfit: outfits.first.id
 },
 {
     count: 1,
-    outfit: outfits.second
+    outfit: outfits.last.id
 }
 ])
 
 links = Links.create([
     {
     links: 'nike.com',
-    outfit: outfits.first
+    outfit: outfits.first.id
 },
 {
     links: 'aimeleondore.com',
-    outfit: outfits.second
+    outfit: outfits[2].id
 }
 ])
 
 ratings = Rating.create([
     {
     rating: 9,
-    outfit: outfits.first
+    outfit: outfits.first.id
 }, 
 {
     rating: 10,
-    outfit: outfit.second
+    outfit: outfits[2].id
 }
 ])
