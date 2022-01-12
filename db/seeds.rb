@@ -4,8 +4,9 @@
 
 users = Users.create([
     {
-    name: "Dan"
+    name: "Dan",
     email: "danmoore@dan.com"
+    password_digest: "password"
 }
 ])
 
