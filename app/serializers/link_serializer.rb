@@ -1,4 +1,4 @@
 class LinkSerializer
   include JSONAPI::Serializer
-  attributes :links
+  attributes :links, :outfit_id
 end

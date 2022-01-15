@@ -1,4 +1,4 @@
 class LikeSerializer
   include JSONAPI::Serializer
-  attributes :count
+  attributes :count, :outfit_id
 end

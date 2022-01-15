@@ -1,4 +1,4 @@
 class RatingSerializer
   include JSONAPI::Serializer
-  attributes :rating
+  attributes :rating, :outfit_id
 end
