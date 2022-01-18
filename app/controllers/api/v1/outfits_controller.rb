@@ -40,7 +40,7 @@ module api
         
             private
             def list_params
-                params.require(:outfit).permit(:image)
+                params.require(:outfit).permit(:image, :description, :rating_agg, :shopping_links, :likes)
             end 
 
     end
