@@ -10,4 +10,7 @@ Rails.application.routes.draw do
       resources :links 
       resources :ratings
     end
+  end
+
+  get '*path', to: 'pages#index', via: :all
 end
