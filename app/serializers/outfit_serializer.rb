@@ -1,8 +1,5 @@
-class OutfitSerializer
-  include JSONAPI::Serializer
-  attributes :id, :image, :description, :rating_agg, :shopping_links, :likes
+class OutfitSerializer < ActiveModel::Serializer
+  attributes :id, :image, :description, :rating_agg, :shopping_links
+  belongs_to :user
 
-  has_many :shopping_links, :likes
-end 
-  has_one :image, :description, :rating_agg
 end
