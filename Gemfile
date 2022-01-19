@@ -37,6 +37,7 @@ group :development do
   gem 'spring'
 
   gem 'jsonapi-serializer'
+  gem 'active_model_serializers'
 
 end
 
