@@ -1,5 +1,4 @@
-class UserSerializer < ActiveModel::Serializer
-  attributes :name, :email, :password_digest
-
-  has_many :outfits
+class UserSerializer
+  include JSONAPI::Serializer
+  attributes :name, :email, :password
 end
